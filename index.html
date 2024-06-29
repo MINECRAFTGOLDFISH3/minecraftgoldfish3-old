@@ -2,11 +2,11 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>minecraftgoldfish3.onrender.com</title>
-        <meta name="description" content="minecraftgoldfish3.onrender.com"  />
-        <meta name="keywords" content="games, projects, no ads, blocky, geometry-dash-scratch"  />
+        <title>minecraftgoldfish3.github.io</title>
+        <meta name="description" content="minecraftgoldfish3.github.io"  />
+        <meta name="keywords" content="games, projects, blocky, geometry-dash-scratch"  />
         <meta name="author" content="minecraftgoldfish3" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="css/style.css" />
         <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -14,23 +14,26 @@
     </head>
     <body>
         <div id="center">
+            <br />
+            <!-- <a href="account/index.html" id="accounts_link">Log In / Sign Up</a> -->
+            <a href="apps/index.html" id="apps_link">Quick Links</a>
             <h1>minecraftgoldfish3.github.io</h1> <hr />
-            <p>Minecraftgoldfish3 website on Render.</p> <br /> <br />
+            <p>Welcome to minecraftgoldfish3.github.io, my github pages site. <a href="https://github.com/MINECRAFTGOLDFISH3/minecraftgoldfish3.github.io.git" target="_blank">This</a> repository is where most of my github pages hosted content is stored at. All content on this site was made by me. Check out some projects I made or visit my other accounts.</p> <br /> <br />
             <div id="button">
-                <a href="geometry-dash/index.html">Play my Geometry Dash recreation in Scratch</a> <br /> <div class="spacer"></div>
-                <a href="puzzlemath/index.html">Puzzlemath Game Website</a> <br /> <div class="spacer"></div>
-                <a href="blocky/index.html">Play Blocky</a> <br /> <div class="spacer"></div>
-                <a href="projects/index.html">View more of the projects I made</a> <br /> <div class="spacer"></div>
-                <a href="https://minecraftgoldfish3.github.io">Main Site</a> <br /> 
+                <a href="https://teacherease.net">Illuminate</a> <br /> <div class="spacer"></div>
+                <a href="https://gd.illuminating.us">Play my Geometry Dash recreation in Scratch</a> <br /> <div class="spacer"></div>
+                <a href="https://blocky.illuminating.us">Play Blocky</a> <br /> <div class="spacer"></div>
+                <a href="Projects/index.html">View more of the projects I made</a> <br /> <div class="spacer"></div>
+                <a href="miscellaneous/index.html">More Stuff</a> <br />
                 <div class="spacer300"></div>
             </div>
         </div>
         <footer>
             <a href="https://scratch.mit.edu/users/MINECRAFTGOLDFISH3/" target="_blank">Scratch</a> |
             <a href="https://scratch.mit.edu/users/MINEGOLD3/" target="_blank">Scratch Alt</a> |
-            <a href="https://minecraftgoldfish3.itch.io" target="_blank">Itch.io</a> |
-            <a href="https://minecraftgoldfish3.github.io">Main Site</a>
+            <a href="https://minecraftgoldfish3.itch.io" target="_blank">Itch.io</a>
         </footer>
+        <!-- <div id="cookiepopup"><h1>Cookie Notice</h1><p>This site uses cookies to store information on game progress.</p><a href="miscellaneous/cookies.html" target="_blank">Learn more</a><br /><br /> <button style="background-color: #333333; color: white; font-size: 150%;" onclick="cookiedismiss('cookiepopup')">Accept All</button></div> -->
         <script>
             function cloak() {
                 win = window.open();
@@ -43,11 +46,42 @@
                 iframe.style.margin = "0";
                 iframe.referrerpolicy = "no-referrer";
                 iframe.allow = "fullscreen";
-                iframe.src = "https://minecraftgoldfish3.github.io/Puzzlemath";
+                iframe.src = "https://minecraftgoldfish3.github.io/puzzlemath";
                 win.document.body.appendChild(iframe);
                 var script = win.document.createElement("script");
                 win.document.body.appendChild(script);
             }
+            function getCookie(name) {
+                var nameEQ = name + "=";
+                var ca = document.cookie.split(";");
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == " ") c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            }
+            function setCookie(name, value, days) {
+                var expires = "";
+                if (days) {
+                    var date = new Date();
+                    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "") + expires + "; path=/";
+            }
+            function eraseCookie(name) {
+                document.cookie = name + "=; Max-Age=-99999;";
+            }
+            function cookiedismiss(id) {
+                document.getElementById(id).style.display = 'none';
+                setCookie('dismissed', 'true', '100');
+            }
+            var dismissed = getCookie('dismissed');
+            if (dismissed == 'true') {
+                document.getElementById('cookiepopup').style.display = 'none';
+            }
         </script>
+        <script src="/js/main.js"></script>
     </body>
 </html>
